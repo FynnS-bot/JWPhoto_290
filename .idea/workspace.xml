@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="365d1939-4ab7-49b8-9372-145525b76abd" name="Changes" comment="" />
+    <list default="true" id="365d1939-4ab7-49b8-9372-145525b76abd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/contact-server/customer/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/contact-server/customer/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/contact-server/customer/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/contact-server/customer/controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/contact-server/customer/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/contact-server/customer/model.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +21,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenDatabaseViewOnStart" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />

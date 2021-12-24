@@ -1,6 +1,7 @@
-const Customer = require('./model.js');
+const Customer = require('./model');
 const Validation = require('../ValidationService');
 const HTTP_STATUS = require('../config/httpcodes.config');
+
 // Create a Customer
 const customerObj = new Customer();
 
@@ -13,15 +14,15 @@ function create(req, res) {
     });
   }
 
-  //Parse data out from request body
-  //Aufgabe: lastName, subject, description, phone hinzufügen
-  //--Begin
   let data = {
     "email": req.body.email,
     "firstName": req.body.firstName,
-    "registered": (new Date())
+    "lastName": req.body.lastName,
+    "registered": (new Date()),
+    "subject": req.body.subject,
+    "description": req.body.description,
+    "phone": req.body.phone,
   }
-  //--End
 
   console.log(`Following data parsed from body ..`);
   console.log(data);
@@ -46,7 +47,7 @@ function create(req, res) {
 
 
 //Lesen Sie alle Kunden/Daten aus der Tabelle customer aus
-function findAll(req, res){
+function getAll(req, res){
   customerObj.getAll((err, result) => {
     if (err)
       res.status(HTTP_STATUS.SERVER_ERROR).send({
@@ -57,15 +58,21 @@ function findAll(req, res){
   });
 }
 
-//Aufgabe: Lese einen einzelnen Kunden anhand der ID aus
-//--Begin
-function findOne(req, res){
-
+//Lese einen einzelnen Kunden anhand der ID aus
+function findById(req, res){
+  customerObj.findById((err, result) => {
+    if (err)
+      res.status(HTTP_STATUS.SERVER_ERROR).send({
+        message:
+            err.message || "Some error occurred while retrieving customer."
+      });
+    else res.send(result);
+  });
 }
 //--End
 
 // Update a Customer identified by the customerId in the request
-function update(req, res){
+function updateById(req, res){
   // Validate Request
   if (!req.body) {
     res.status(HTTP_STATUS.BAD_REQUEST).send({
@@ -95,7 +102,7 @@ function update(req, res){
 
 //Aufgabe: Einzelnen Kunden anhand der ID löschen
 //--Begin
-function remove(req,res){
+function removeById(req,res){
 
 }
 //--End
@@ -112,11 +119,11 @@ function removeAll(req, res){
  *  Export validation functions for further usage.
  *  function to export WITHOUT brackets!
  */
-//Aufgabe: Fügen Sie die noch nicht exportierten Funktionen hinzu
-//--Begin
 module.exports = {
   create,
-  findAll,
-  update
+  getAll,
+  findById,
+  updateById,
+  removeById,
+  removeAll
 }
-//--End

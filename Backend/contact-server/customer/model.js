@@ -17,7 +17,6 @@ module.exports = class Customer {
                 cbResult(err, null);
                 return;
             }
-
             console.log("created contact: ", {id: res.insertId, ...newCustomer});
             cbResult(null,
                 {msg: "New Contact from has been inserted!", id: res.insertId, ...newCustomer});
@@ -30,28 +29,27 @@ module.exports = class Customer {
      * @param id
      * @param cbResult: result of sql statement
      */
-    //Aufgabe: Lese einen einzelnen Kunden anhand der ID aus
-    //--Begin
+    //Lese einen einzelnen Kunden anhand der ID aus
     findById(id, cbResult) {
-        sql.query(`--??`, id, (err, result) => {
+        sql.query(`SELECT * FROM customer as c WHERE c.id=?`, id, (err, result) => {
             if (err) {
-                //??
-                //??
-                //??
+                if(err.kind === "not_found"){
+                    res.status(HTTP_STATUS.BAD_REQUEST).send({
+                        messgae: `Not found customer with id ${id}.`
+                    })
+                }
+                console.log("error: ", err);
+                cbResult(err, null);
+                return;
             }
-
             //result of the select (greater than 0) has found a record (Tupel)
             if (result.length) {
                 console.log("found customer: ", result[0]);
                 cbResult(null, result[0]);
                 return;
             }
-
-            // not found Customer with the id
-            //??
         });
     };
-    //--End
 
 
     /**

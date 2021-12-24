@@ -1,34 +1,20 @@
 const customer = require("./controller.js");
-module.exports = app => {
-  const customer = require("./controller.js");
+module.exports = (app) => {
+    //Create a new customer (SQL-Insert)
+    app.post("/customer", customer.create);
 
-  // Create a new Customer
-  app.post("/customer", customer.create);
+    //Retrieve all customers (SQL-SELECT)
+    app.get('/customers', customer.getAll);
 
-  // Retrieve all Customers
-  app.get("/customers", customer.findAll);
+    //Retrieve single customer (SQL-SELECT)
+    app.get('/customer/:id', customer.findById);
 
-  //Aufgabe: REST-API, um EINEN Kunden anhand der ID auszugeben
-  //--Begin
-  // Retrieve a single Customer with login id
+    //Update a customer with customerId (SQL-UPDATE)
+    app.put('/customer/:id', customer.updateById);
 
-  //--End
+    //Delete a customer with customerId (SQL-Delete)
+    app.delete('/customer/:id', customer.removeById);
 
-  // Update a Customer with customerId
-  app.put("/customer/:id", customer.update);
-
-
-  //Aufgabe: REST-API, um EINEN Kunden anhand der ID zu löschen
-  //--Begin
-  // Delete a Customer with customerId
-
-  //--End
-
-
-  //Aufgabe: REST-API, um alle Kunden zu löschen
-  //--Begin
-  // delete all customers
-
-  //--End
-
+    //Delete all customers (SQL-Delete)
+    app.delete('/customers', customer.removeAll);
 };
