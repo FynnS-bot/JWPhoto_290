@@ -1,0 +1,266 @@
+[
+  {
+    "id": "517ae47f-483b-419c-b845-2ffeff68aa6a",
+    "username": "fschmid",
+    "email": "sosoemail@beispiel.ch",
+    "password": "1234567"
+  },
+  {
+    "id": "efaa50b6-a2da-44aa-be1d-baf213af25bc",
+    "username": "SDFASDFSA",
+    "email": "xx@xxxx.com",
+    "password": "12aa57",
+    "phonenumber": "41799474390"
+  },
+  {
+    "id": "62b715a1-b65d-4a1e-bdc4-60f5cf08596e",
+    "username": "SDFASDFSA",
+    "email": "xx@xxxx.com",
+    "password": "12aa57",
+    "phonenumber": "41799474390"
+  },
+  {
+    "id": "3a0ff27e-a6ee-4825-b8ba-13ea6c91919e",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "12345678",
+    "phonenumber": "41763931066"
+  },
+  {
+    "id": "74c94723-a213-4361-b0ca-99ace91315f6",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "12345678",
+    "phonenumber": "41763931066"
+  },
+  {
+    "id": "e662c990-44ce-4370-9ee4-c649492a8fb4",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "12345678",
+    "lastname": "Wermuth",
+    "firstname": "Janic",
+    "phonenumber": "41763931066",
+    "password2": "12345678"
+  },
+  {
+    "id": "99aafd52-0156-458e-b3d7-670fb7363300",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "1234567",
+    "lastname": "Wermuth",
+    "firstname": "Janic",
+    "phonenumber": "41763931066",
+    "password2": "12345678"
+  },
+  {
+    "id": "1f0bbadc-1c45-458c-bd96-709b2c096b99",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "1234567",
+    "lastname": "Wermuth",
+    "firstname": "Janic",
+    "phonenumber": "41763931066",
+    "password2": "12345678"
+  },
+  {
+    "id": "735cb56d-69b8-4931-a429-9e2bdb4444bc",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "12345678",
+    "lastname": "Wermuth",
+    "firstname": "Janic",
+    "phonenumber": "41763931066",
+    "password2": "12345678"
+  },
+  {
+    "id": "95549fe1-abaf-4b15-bdd9-3402cb1bae18",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "12345678",
+    "lastname": "Wermuth",
+    "firstname": "Janic",
+    "phonenumber": "41763931066",
+    "password2": "12345678"
+  },
+  {
+    "id": "262333b3-eecc-49ef-9d92-cf21271cf9f1",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "12345678",
+    "lastname": "Wermuth",
+    "firstname": "Janic",
+    "phonenumber": "41763931066",
+    "password2": "12345678"
+  },
+  {
+    "id": "3960d5f5-21bc-43de-b3ea-8f1df9547515",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "1234567",
+    "lastname": "Wermuth",
+    "firstname": "Janic",
+    "phonenumber": "41763931066",
+    "password2": "12345678"
+  },
+  {
+    "id": "7608606a-bf97-4238-a9e6-c4902d6abbb8",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "123456",
+    "lastname": "Wermuth",
+    "firstname": "Janic",
+    "phonenumber": "41763931066",
+    "password2": "12345678"
+  },
+  {
+    "id": "600de79d-0a34-4882-9c79-559b4293a210",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "123456",
+    "lastname": "Wermuth",
+    "firstname": "Janic",
+    "phonenumber": "41763931066",
+    "password2": "12345678"
+  },
+  {
+    "id": "5df19acd-8062-4046-9188-bda34434aa50",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "12345678",
+    "lastname": "Wermuth",
+    "firstname": "Janic",
+    "phonenumber": "41763931066",
+    "password2": "12345678"
+  },
+  {
+    "id": "1ccc6a23-ad30-4580-92df-66b7cf50b163",
+    "username": "SDFASDFSA",
+    "email": "xx@xxxx.com",
+    "password": "12aa5789",
+    "lastname": "aba",
+    "firstname": "as",
+    "phonenumber": "+41799474390",
+    "password2": "12aa5789"
+  },
+  {
+    "id": "03936501-f9b2-4536-b3bc-38c8d162b450",
+    "username": "SDFASDFSA",
+    "email": "xx@xxxx.com",
+    "password": "12aa5789",
+    "lastname": "aba",
+    "firstname": "as",
+    "phonenumber": "+41799474390",
+    "password2": "12aa5789"
+  },
+  {
+    "id": "2d438973-0404-4996-bece-7dff7e8dfb2e",
+    "username": "SDFASDFSA",
+    "email": "xx@xxxx.com",
+    "password": "12aa5789",
+    "lastname": "1",
+    "firstname": "as",
+    "phonenumber": "+41799474390",
+    "password2": "12aa5789"
+  },
+  {
+    "id": "45dbe4f0-146f-479c-826c-56f0733546e4",
+    "username": "SDFASDFSA",
+    "email": "xx@xxxx.com",
+    "password": "12aa5789",
+    "lastname": "1",
+    "firstname": "as",
+    "phonenumber": "+41799474390",
+    "password2": "12aa5789"
+  },
+  {
+    "id": "95d788a4-e556-4556-b991-8b9b1414183d",
+    "username": "SDFASDFSA",
+    "email": "xx@xxxx.com",
+    "password": "12aa5789",
+    "lastname": "1",
+    "firstname": "as",
+    "phonenumber": "+41799474390",
+    "password2": "12aa5789"
+  },
+  {
+    "id": "f3016418-209d-4d26-9a23-cbb837d334e4",
+    "username": "SDFASDFSA",
+    "email": "xx@xxxx.com",
+    "password": "12aa5789",
+    "lastname": "asdwasd",
+    "firstname": "as",
+    "phonenumber": "+41799474390",
+    "password2": "12aa5789"
+  },
+  {
+    "id": "90d6171b-97f6-4a76-a90a-52e9c6b80fdb",
+    "username": "SDFASDFSA",
+    "email": "xx@xxxx.com",
+    "password": "12aa5789",
+    "lastname": "asdwasd",
+    "firstname": "asdwasd",
+    "phonenumber": "+41799474390",
+    "password2": "12aa5789"
+  },
+  {
+    "id": "5a29800b-168d-4c4e-a8de-8a20e49d047e",
+    "username": "SDFASDFSA",
+    "email": "xx@xxxx.com",
+    "password": "12aa5789",
+    "lastname": "asdwasd",
+    "firstname": "asdwasd",
+    "phonenumber": "+41799474390",
+    "password2": "12aa5789"
+  },
+  {
+    "id": "ed946317-bf3a-46ea-a8d1-fe42f34c23c1",
+    "username": "SDFASDFSA",
+    "email": "xx@xxxx.com",
+    "password": "12aa5789",
+    "lastname": "asdwasd",
+    "firstname": "a",
+    "phonenumber": "+41799474390",
+    "password2": "12aa5789"
+  },
+  {
+    "id": "9ab7b8ab-924a-4cf2-b764-12d12df81f7c",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "12345678",
+    "lastname": "Wermuth",
+    "firstname": "Janic",
+    "phonenumber": "41763931066",
+    "password2": "12345678"
+  },
+  {
+    "id": "0f13f6ff-3fc6-4f64-b19c-e783c4fe79dc",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "12345678",
+    "lastname": "Wermuth",
+    "firstname": "j",
+    "phonenumber": "41763931066",
+    "password2": "12345678"
+  },
+  {
+    "id": "d0d7fe4e-80ee-46ec-8378-8a6816c72f07",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "12345678",
+    "lastname": "Wermuth",
+    "firstname": "j",
+    "phonenumber": "41763931066",
+    "password2": "12345678"
+  },
+  {
+    "id": "bfcbfcae-d808-4ac1-9149-f17742c07e30",
+    "username": "fschmid",
+    "email": "soso@email.com",
+    "password": "12345678",
+    "lastname": "Wermuth",
+    "firstname": "j",
+    "phonenumber": "41763931066",
+    "password2": "12345678"
+  }
+]
