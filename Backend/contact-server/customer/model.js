@@ -113,21 +113,22 @@ module.exports = class Customer {
     //Aufgabe: Einzelnen Kunden anhand der ID löschen
     //--Begin
     remove(id, cbResult) {
-        sql.query("--??", id, (err, result) => {
+        let queryString = 'DELETE FROM customer WHERE id = ?';
+        sql.query(queryString, id, (err, result) => {
             if (err) {
-                //??
-                //??
-                //??
+                console.log("error: ", err);
+                //err zurückgeben, data = null
+                cbResult(err, null);
+                return;
             }
 
             if (result.affectedRows === 0) {
-                // not found Customer with the id
-                //??
-                //??
+                 cbResult({kind: "not_found"}, null);
+                 return;
             }
 
             console.log("deleted customer with id: ", id);
-            //??
+            cbResult(null, {});
         });
     }
     //--End

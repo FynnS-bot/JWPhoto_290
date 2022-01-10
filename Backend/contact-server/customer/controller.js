@@ -22,6 +22,7 @@ function create(req, res) {
     "subject": req.body.subject,
     "description": req.body.description,
     "phone": req.body.phone,
+    "address": req.body.address,
   }
 
   console.log(`Following data parsed from body ..`);
@@ -103,7 +104,24 @@ function updateById(req, res){
 //Aufgabe: Einzelnen Kunden anhand der ID löschen
 //--Begin
 function removeById(req,res){
+// Validate Request
+  console.log(req.body);
 
+  customerObj.removeById(req.params.id,
+    (err, result) => {
+      if (err) {
+        if (err.kind === "not_found") {
+          res.status(HTTP_STATUS.NOT_FOUND).send({
+            message: `Not found Customer with id ${req.params.id}.`
+          });
+        } else {
+          res.status(HTTP_STATUS.SERVER_ERROR).send({
+            message: `Error updating Customer with id ${req.params.id}.`
+          });
+        }
+      } else res.send(result);
+    }
+  );
 }
 //--End
 

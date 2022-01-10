@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="365d1939-4ab7-49b8-9372-145525b76abd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/contact-server/customer/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/contact-server/customer/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/contact-server/customer/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/contact-server/customer/controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/contact-server/customer/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/contact-server/customer/model.js" afterDir="false" />
     </list>
@@ -25,7 +24,7 @@
     <property name="RunOnceActivity.OpenDatabaseViewOnStart" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Backend" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
 </project>
