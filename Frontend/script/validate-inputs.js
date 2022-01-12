@@ -119,7 +119,7 @@ function checkDescription(input) {
   const re = (/^[A-Za-z]+$/);
   if (re.test(input.value.trim())) {
     //showSuccess(input);
-    checkLength(description, 10, 25);
+    showSuccess(input);
   } else {
     showError(input, 'Description is not valid');
   }
@@ -175,6 +175,7 @@ function validateForm(){
     checkPhone(phone);
     checkSubject(subject);
     checkDescription(description);
+    checkLenght(description, 10, 25);
     checkAddress(address);
   }
 }
