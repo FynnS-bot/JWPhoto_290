@@ -168,7 +168,7 @@ function getFieldName(input) {
 */
 //--Begin
 function validateForm(){
-  if(!checkRequired([email, firstName, lastName, subject, description, phone, address, ])){
+  if(!checkRequired([email, firstName, lastName, subject, description, phone, address ])){
     checkFirstname(firstName);
     checkLastname(lastName);
     checkEmail(email);
