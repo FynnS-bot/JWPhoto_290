@@ -5,6 +5,11 @@ let ALL_INPUT_VALID;
 const form = document.getElementById('form');
 const email = document.getElementById('email');
 const firstName = document.getElementById('firstName');
+const lastName = document.getElementById('lastName');
+const subject = document.getElementById('subject');
+const description = document.getElementById('description');
+const phone = document.getElementById('phone');
+const address = document.getElementById('address');
 
 /* Aufgabe: Lesen Sie folgende Input-Elemente aus:
   lastName, subject, description (textarea), phone
@@ -57,19 +62,79 @@ function checkRequired(inputArr) {
 // Check input length
 function checkLength(input, min, max) {
   if (input.value.length < min) {
-    showError(input,
+    showError(
+        input,
         `${getFieldName(input)} must be at least ${min} characters`
     );
-    ALL_INPUT_VALID = false;
   } else if (input.value.length > max) {
-    showError(input,
+    showError(
+        input,
         `${getFieldName(input)} must be less than ${max} characters`
     );
-    ALL_INPUT_VALID = false;
   } else {
     showSuccess(input);
   }
 }
+
+function checkPhone(input) {
+  const re = /^(?:(?:|0{1,2}|\+{0,2})41(?:|\(0\))|0)([1-9]\d)(\d{3})(\d{2})(\d{2})$/;
+  if (re.test(input.value.trim())) {
+    showSuccess(input);
+  } else {
+    showError(input, 'Phonenumber is not valid');
+  }
+}
+// Check Lastname is valid
+function checkLastname(input) {
+  const re = (/^[A-Za-z]+$/);
+  if (re.test(input.value.trim())) {
+    //showSuccess(input);
+    checkLength(lastName, 3, 50);
+  } else {
+    showError(input, 'Lastname is not valid');
+  }
+}
+
+// Check Firstname is valid
+function checkFirstname(input) {
+  const re = (/^[A-Za-z]+$/);
+  if (re.test(input.value.trim())) {
+    //showSuccess(input);
+    checkLength(firstName, 2, 20);
+  } else {
+    showError(input, 'Firstname is not valid');
+  }
+}
+function checkSubject(input) {
+  const re = (/^[A-Za-z]+$/);
+  if (re.test(input.value.trim())) {
+    //showSuccess(input);
+    checkLength(subject, 8, 20);
+  } else {
+    showError(input, 'Subject is not valid');
+  }
+}
+
+function checkDescription(input) {
+  const re = (/^[A-Za-z]+$/);
+  if (re.test(input.value.trim())) {
+    //showSuccess(input);
+    checkLength(description, 10, 25);
+  } else {
+    showError(input, 'Description is not valid');
+  }
+}
+
+function checkAddress(input) {
+  const re = (/^[0-9a-zA-Z]+$/);
+  if (re.test(input.value.trim())) {
+    //showSuccess(input);
+    checkLength(address, 2, 20);
+  } else {
+    showError(input, 'Address is not valid');
+  }
+}
+
 
 
 // Check phone is valid
@@ -93,6 +158,8 @@ function getFieldName(input) {
   return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
+
+
 /**
  * Validate form input elements
  */
@@ -101,9 +168,14 @@ function getFieldName(input) {
 */
 //--Begin
 function validateForm(){
-  if(!checkRequired([email, firstName])){
-    checkLength(firstName, 3, 20);
+  if(!checkRequired([email, firstName, lastName, subject, description, phone, address, ])){
+    checkFirstname(firstName);
+    checkLastname(lastName);
     checkEmail(email);
+    checkPhone(phone);
+    checkSubject(subject);
+    checkDescription(description);
+    checkAddress(address);
   }
 }
 //--End
@@ -122,6 +194,8 @@ window.onload = () => {
       }
   );
 };
+
+
 
 /**
  * Event listener
