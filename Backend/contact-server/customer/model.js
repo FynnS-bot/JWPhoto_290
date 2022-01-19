@@ -140,7 +140,7 @@ module.exports = class Customer {
     //Aufgabe: Alle Kunden löschen
     //--Begin
     removeAll(cbResult) {
-        sql.query("--??", (err, result) => {
+        sql.query("", (err, result) => {
             if (err) {
                 //??
                 //??

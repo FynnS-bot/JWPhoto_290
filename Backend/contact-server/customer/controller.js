@@ -47,7 +47,7 @@ function create(req, res) {
 }
 
 
-//Lesen Sie alle Kunden/Daten aus der Tabelle customer aus
+//Lesen Sie alle Kunden/Daten aus der Tabelle customer aus (done)
 function getAll(req, res){
   customerObj.getAll((err, result) => {
     if (err)
@@ -59,7 +59,7 @@ function getAll(req, res){
   });
 }
 
-//Lese einen einzelnen Kunden anhand der ID aus
+//Lese einen einzelnen Kunden anhand der ID aus (done)
 function findById(req, res){
   customerObj.findById((err, result) => {
     if (err)
@@ -101,7 +101,7 @@ function updateById(req, res){
 }
 
 
-//Aufgabe: Einzelnen Kunden anhand der ID löschen
+//Aufgabe: Einzelnen Kunden anhand der ID löschen (done)
 //--Begin
 function removeById(req,res){
 // Validate Request
