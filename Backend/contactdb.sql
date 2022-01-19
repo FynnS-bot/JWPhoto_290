@@ -46,7 +46,12 @@ CREATE TABLE `customer` (
   `id` int NOT NULL AUTO_INCREMENT,
   `email` varchar(25) NOT NULL,
   `firstName` varchar(50)  NOT NULL,
+  `lastName` varchar(50) NOT NULL,
+  `subject` varchar(50) NOT NULL,
   `registered` datetime NOT NULL,
+  `description` varchar(50) NOT NULL,
+  `phone` varchar(50) NOT NULL,
+
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
