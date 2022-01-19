@@ -39,7 +39,8 @@ function checkEmail(input) {
     showSuccess(input);
   } else {
     showError(input, 'Email is not valid');
-    ALL_INPUT_VALID = false;
+    ALL_INPUT_VALID = false; 
+    // NEwLY oFFFF  ALL_INPUT_VALID = false;
   }
 }
 
@@ -50,7 +51,7 @@ function checkRequired(inputArr) {
     if (input.value.trim() === '') {
       showError(input, `${getFieldName(input)} is required`);
       isRequired = true;
-      ALL_INPUT_VALID = false;
+      // NEWLY OFFFFF ALL_INPUT_VALID = false;
     } else {
       showSuccess(input);
     }
@@ -65,12 +66,17 @@ function checkLength(input, min, max) {
     showError(
         input,
         `${getFieldName(input)} must be at least ${min} characters`
+        
     );
+    ALL_INPUT_VALID = false; 
+
   } else if (input.value.length > max) {
     showError(
         input,
         `${getFieldName(input)} must be less than ${max} characters`
     );
+    ALL_INPUT_VALID = false; 
+
   } else {
     showSuccess(input);
   }
@@ -82,6 +88,8 @@ function checkPhone(input) {
     showSuccess(input);
   } else {
     showError(input, 'Phonenumber is not valid');
+    ALL_INPUT_VALID = false; 
+
   }
 }
 // Check Lastname is valid
@@ -92,6 +100,8 @@ function checkLastname(input) {
     checkLength(lastName, 3, 50);
   } else {
     showError(input, 'Lastname is not valid');
+    ALL_INPUT_VALID = false; 
+
   }
 }
 
@@ -103,6 +113,8 @@ function checkFirstname(input) {
     checkLength(firstName, 2, 20);
   } else {
     showError(input, 'Firstname is not valid');
+    ALL_INPUT_VALID = false; 
+
   }
 }
 function checkSubject(input) {
@@ -112,26 +124,32 @@ function checkSubject(input) {
     checkLength(subject, 8, 20);
   } else {
     showError(input, 'Subject is not valid');
+    ALL_INPUT_VALID = false; 
+
   }
 }
 
 function checkDescription(input) {
-  const re = (/^[A-Za-z]+$/);
+  const re = (/^[A-Za-z\s]+$/);
   if (re.test(input.value.trim())) {
     //showSuccess(input);
-    showSuccess(input);
+    checkLength(description, 10, 50)
   } else {
     showError(input, 'Description is not valid');
+    ALL_INPUT_VALID = false; 
+
   }
 }
 
 function checkAddress(input) {
-  const re = (/^[0-9a-zA-Z]+$/);
+  const re = (/^[0-9a-zA-Z\s]+$/);
   if (re.test(input.value.trim())) {
     //showSuccess(input);
     checkLength(address, 2, 20);
   } else {
     showError(input, 'Address is not valid');
+    ALL_INPUT_VALID = false; 
+
   }
 }
 
@@ -169,13 +187,18 @@ function getFieldName(input) {
 //--Begin
 function validateForm(){
   if(!checkRequired([email, firstName, lastName, subject, description, phone, address ])){
+    // checkLength(lastName, 3, 50);
+    // checkLength(firstName, 2, 20);
+    // checkLength(subject, 8, 20);
+    // checkLength(description, 10, 50);
+    // checkLength(address, 2, 20);
+    
     checkFirstname(firstName);
     checkLastname(lastName);
     checkEmail(email);
     checkPhone(phone);
     checkSubject(subject);
     checkDescription(description);
-    checkLenght(description, 10, 25);
     checkAddress(address);
   }
 }
@@ -203,22 +226,18 @@ window.onload = () => {
  */
 form.addEventListener('submit', function(e) {
   ALL_INPUT_VALID = true;
-  //https://www.w3schools.com/jsref/event_preventdefault.asp
   e.preventDefault();
-  //First validate form
   validateForm();
-  //Send Data
   if (ALL_INPUT_VALID){
-    //Pay attention: use value property to send data. If omitting
-    //you're sending HTML-DOM objects!
-
-    /* Aufgabe: Senden Sie folgende zusätzlich Input-Daten zum Server:
-        lastName, subject, description, phone
-    */
-    //--Begin
+    
     let formData = {
         email: email.value,
-        firstName: firstName.value
+        firstName: firstName.value,
+        lastName: lastName.value,
+        subject: subject.value,
+        description: description.value,
+        phone: phone.value,
+        address: address.value
       }
     //--End
 
