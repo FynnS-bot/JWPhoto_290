@@ -15,6 +15,12 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+
+
+
+
+
 -- Create admin and set password
 drop user if exists 'adminContactDB'@'localhost';
 create user 'adminContactDB'@'localhost' identified WITH mysql_native_password by 'hello';
@@ -49,8 +55,8 @@ CREATE TABLE `customer` (
   `lastName` varchar(50) NOT NULL,
   `subject` varchar(50) NOT NULL,
   `registered` datetime NOT NULL,
-  `description` varchar(50) NOT NULL,
-  `phone` varchar(50) NOT NULL,
+  `description` varchar(500) NOT NULL,
+  `phone` varchar(20) NOT NULL,
 
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
