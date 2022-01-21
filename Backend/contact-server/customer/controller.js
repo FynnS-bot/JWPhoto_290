@@ -61,7 +61,7 @@ function getAll(req, res){
 
 //Lese einen einzelnen Kunden anhand der ID aus (done)
 function findById(req, res){
-  customerObj.findById((err, result) => {
+  customerObj.findById(req.params.id, (err, result) => {
     if (err)
       res.status(HTTP_STATUS.SERVER_ERROR).send({
         message:
@@ -80,8 +80,6 @@ function updateById(req, res){
       message: "Content can not be empty!"
     });
   }
-
-  console.log(req.body);
 
   customerObj.updateById(req.params.id, req.body,
     (err, result) => {
@@ -104,9 +102,6 @@ function updateById(req, res){
 //Aufgabe: Einzelnen Kunden anhand der ID löschen (done)
 //--Begin
 function removeById(req,res){
-// Validate Request
-  console.log(req.body);
-
   customerObj.removeById(req.params.id,
     (err, result) => {
       if (err) {
@@ -128,7 +123,14 @@ function removeById(req,res){
 //Aufgabe: Alle Kunden löschen
 //--Begin
 function removeAll(req, res){
-
+  customerObj.removeAll((err, result) => {
+        if (err) {
+            res.status(HTTP_STATUS.SERVER_ERROR).send({
+              message: `Error updating Customer with id ${req.params.id}.`
+            });
+        } else res.send(result);
+      }
+  );
 }
 //--End
 

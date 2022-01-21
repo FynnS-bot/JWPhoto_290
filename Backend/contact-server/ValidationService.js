@@ -7,24 +7,57 @@ const validateLib = require('./ValidationLib');
  * @returns {boolean|{msg: string, isNotValid: boolean}|{isNotValid}|*}
  */
 function validateFormData(data) {
-    // Check required fields
-    let result = validateLib.checkRequired("firstName", data.firstName);
+    console.log("___ Test");
+    console.log(data);
+    let result;
+    // Check required fields //Check required firstName
+    result = validateLib.checkRequired("firstName", data.firstName);
     if (result.isNotValid) { return result; }
 
+    //Check required lastName
+    result = validateLib.checkRequired("lastName", data.lastName);
+    if (result.isNotValid) { return result; }
+
+    //Check required email
     result = validateLib.checkRequired("email", data.email);
     if (result.isNotValid) { return result; }
 
-    //Aufgabe: checkRequired für lastName, subject, description, phone hinzufügen
-    //--Begin
+    //Check required phone
+    result = validateLib.checkRequired("phone", data.phone);
+    if (result.isNotValid) { return result; }
+
+    //Check required subject
+    result = validateLib.checkRequired("subject", data.subject);
+    if (result.isNotValid) { return result; }
+
+    //Check required description
+    result = validateLib.checkRequired("description", data.description);
+    if (result.isNotValid) { return result; }
+
+    //Check required address
+    result = validateLib.checkRequired("address", data.address);
+    if (result.isNotValid) { return result; }
+
+
 
     //--End
 
-    //check length
-    result = validateLib.checkLength("firstName",data.firstName, 3, 50);
+
+    //check length --Begin
+    //firstName
+    result = validateLib.checkLength("firstName",data.firstName, 2, 20);
     if (result.isNotValid) { return result; }
 
-    //Aufgabe: checkLength für lastName hinzufügen
-    //--Begin
+
+    //lastName
+    result = validateLib.checkLength("lastName",data.lastName, 3, 50);
+    if (result.isNotValid) { return result; }
+
+    //lastSubject
+    result = validateLib.checkLength("subject",data.subject, 8, 20);
+    if (result.isNotValid) { return result; }
+
+
 
     //--End
 
@@ -35,8 +68,23 @@ function validateFormData(data) {
     //check mobile syntax
     //Aufgabe: Validierungsregel der Mobilenummer anwenden
     //--Begin
-
+    result = validateLib.checkPhone("phone", data.phone);
+    if (result.isNotValid) { return result; }
     //--End
+
+    //check Address syntax
+    result = validateLib.checkAddress("address", data.address);
+    if (result.isNotValid) { return result; }
+
+    //check desciption syntax
+    result = validateLib.checkDescription("description", data.description);
+    if (result.isNotValid) { return result; }
+
+    //check subject syntax
+    result = validateLib.checkSubject("subject", data.subject);
+    if (result.isNotValid) { return false; }
+
+
 
 
     //all inputs are valid and isNotValid=false

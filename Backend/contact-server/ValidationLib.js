@@ -32,6 +32,61 @@ function checkEmail(id,input) {
     return result;
 }
 
+
+    //check Address is valid
+    function checkAddress(id,input) {
+        //Default: is valid
+        let result = {
+            isNotValid: false,
+            msg: showSuccess(id)
+        }
+        const re = (/^[0-9a-zA-Z\s]+$/);
+        if (!re.test(input.trim())) {
+            result = {
+                isNotValid: true,
+                msg: showError(id, 'Address is not valid')
+            }
+        }
+        return result;
+    }
+
+    //check Description is valid
+    function checkDescription(id,input) {
+        //Default: is valid
+        let result = {
+            isNotValid: false,
+            msg: showSuccess(id)
+        }
+        const re = (/^[A-Za-z\s]+$/);
+        if (!re.test(input.trim())) {
+            result = {
+                isNotValid: true,
+                msg: showError(id, 'Description is not valid')
+            }
+        }
+        return result;
+    }
+
+    //check Subject is valid
+    function checkSubject(id,input) {
+        //Default: is valid
+        let result = {
+            isNotValid: false,
+            msg: showSuccess(id)
+        }
+        const re = (/^[A-Za-z\s]+$/);
+        if (!re.test(input.trim())) {
+            result = {
+                isNotValid: true,
+                msg: showError(id, 'Subject is not valid')
+            }
+        }
+        return result;
+    }
+
+
+
+
 //TODO: Check article for throwing errors in node js
 // https://stackoverflow.com/questions/33086247/throwing-an-error-in-node-js
 
@@ -74,8 +129,9 @@ function checkLength(id, input, min, max) {
                 `${id} must be less than ${max} characters`)
         }
     }
-    return result;
-}
+    return result;}
+
+
 
 
 // Check phone is valid
@@ -86,7 +142,7 @@ function checkLength(id, input, min, max) {
     https://www.w3resource.com/javascript/form/phone-no-validation.php
 */
 //--Begin
-function checkMobileNumber(id, input) {
+function checkPhone(id, input) {
     //Default: is valid
     let result = {
         isNotValid: false,
@@ -113,5 +169,8 @@ module.exports = {
     checkEmail,
     checkLength,
     checkRequired,
-    checkMobileNumber
+    checkPhone,
+    checkAddress,
+    checkDescription,
+    checkSubject,
 }

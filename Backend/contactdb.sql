@@ -4,7 +4,7 @@
 -- ------------------------------------------------------
 -- Server version	8.0.19
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@character_set_client */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!50503 SET NAMES utf8mb4 */;
@@ -51,12 +51,13 @@ DROP TABLE IF EXISTS `customer`;
 CREATE TABLE `customer` (
   `id` int NOT NULL AUTO_INCREMENT,
   `email` varchar(25) NOT NULL,
-  `firstName` varchar(50)  NOT NULL,
+  `firstName` varchar(20)  NOT NULL,
   `lastName` varchar(50) NOT NULL,
-  `subject` varchar(50) NOT NULL,
+  `subject` varchar(20) NOT NULL,
   `registered` datetime NOT NULL,
-  `description` varchar(500) NOT NULL,
+  `description` varchar(50) NOT NULL,
   `phone` varchar(20) NOT NULL,
+  `address` varchar(20) NOT NULL,
 
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
